@@ -26,3 +26,50 @@
     @apply w-full px-9 py-3 bg-color-primary-dark rounded-md capitalize font-bold hover:bg-color-secondary ease-in duration-200;
 }
 
+.user-text {
+    display: none;
+}
+
+.user-text.active-text {
+    display: block;
+    animation: moveup 1s linear forwards;
+}
+
+.user-pic {
+    transition: all 0.2s ease;
+}
+
+.user-pic.active-pic {
+    border: 2px solid #ff7d3b;
+}
+
+@keyframes moveup {
+    0% {
+        margin-top: 40px;
+        opacity: 0;
+    }
+
+    50% {
+        margin-top: 20px;
+        opacity: 0.1;
+    }
+
+    100% {
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+
+.card {
+    perspective: 1000px;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.front {
+    overflow: hidden;
+}
